@@ -144,14 +144,64 @@
 // console.log(Object.keys(persona));
 
 //sprear operator
-let lenguajes = ['Javascript','PHP','Python'];
-let frameworks = ['ReactJS','Laravel','Django'];
+// let lenguajes = ['Javascript','PHP','Python'];
 
-let combinacion = [...lenguajes,...frameworks];
-console.log(combinacion);
+// //con spread
+// let [ultimo] =[...lenguajes].reverse();
+// console.log(lenguajes);
+// console.log(ultimo);
+
+// function suma(a,b,c){
+//     console.log(a+b+c);
+// }
+// const numeros=[1,2,3];
+// //suma(...numeros);
+
+//FILTER, FIND Y REDUCE
 
 
+// const personas =[
+//     {nombre: 'Juan',edad:23,aprendiendo:'Javascript'},
+//     {nombre: 'Pablo',edad:18,aprendiendo:'PHP'},
+//     {nombre: 'Alejandra',edad:21,aprendiendo:'AdobeXD'},
+//     {nombre: 'Caren',edad:30,aprendiendo:'Python'},
+//     {nombre: 'Miguel',edad:35,aprendiendo:'ReactJS'},
+// ]
 
+// console.log(personas);
+// //mayores 28 años
 
+// const mayores = personas.filter(persona =>{
+//     return persona.edad >28;
+// });
+// console.log(mayores);
+// //que aprende alejandra y su edad
+// const alejandra= personas.find(persona =>{
+//     return persona.nombre === 'Alejandra';
+// });
+// // console.log('Alejandra esta aprendiendo: ' + alejandra.aprendiendo);
 
+// //reduce
+
+// let total = personas.reduce((edadTotal,persona)=>{
+//     return edadTotal + persona.edad;
+// },0);
+// console.log(total);
+
+//promises
+
+const aplicarDescuento = new Promise((resolve, reject)=>{
+setTimeout( () => {
+    let descuento = true;
+
+    if(descuento){
+        resolve('Descuento aplicado!');
+    }else{
+        reject('No se pudo aplicar el descuento')
+    }
+},3000);
+});
+aplicarDescuento.then(resultado =>{
+    console.log(resultado);
+})
 
